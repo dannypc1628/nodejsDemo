@@ -2,6 +2,7 @@ var http = require('http');
 var fs = require('fs');
 var path = require('path');
 var url = require('url');
+var port = process.env.PORT || 12345;
 //建立http伺服器
 
 var server = http.createServer(function (req,res){
@@ -29,7 +30,7 @@ var server = http.createServer(function (req,res){
 });
 
 //監聽 12345 port
-server.listen(12345);
+server.listen(port);
 
 console.log('Server running at http://127.0.0.7:12345/');
 
